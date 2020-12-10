@@ -19,6 +19,7 @@ def main():
             continue
         path_rule = os.path.join(args.rule, file)
         path_txt = os.path.join(args.result, file)
+        
         os.system(f'cargo run {path_rule} {args.url} {path_txt}')
 
         with open(path_txt, 'r') as hdle:
